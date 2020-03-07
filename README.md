@@ -21,23 +21,25 @@ Trying to edit the piratebox interface is the most backward shit I've ever witne
 
 Ok. Let's try this folder **/opt/piratebox/www_content**:
 >sudo chmod a+rw /opt/piratebox/www_content -R
+
 Ok. So apparently that directory is just a f*cking distraction. So write this command to destroy that directory, we don't need it.
 >sudo rmdir "/opt/piratebox/www_content"
+
 This will remove the directory. Piratebox also uses that folder as a backup so we definitely don't need it. It is just confusing.
 
-Giving permission to this /opt/piratebox/bin/ might delete later >.<
+Giving permission to this **/opt/piratebox/bin/** might delete later >.<
 ...
 Nevermind
 
-The lighttpd.conf file in /opt/piratebox/conf/lighttpd has this info:
+The **lighttpd.conf** file in **/opt/piratebox/conf/lighttpd** has this info:
 > > Grabs main css
 >dir-listing.external-css     	= "/content/css/page_style.css"
 
-So this might mean that page_style.css in that specific directory is the main css. The same doc also says this:
+So this might mean that **page_style.css** in that specific directory is the main css. The same doc also says this:
 >server.document-root        = "/opt/piratebox/www"
 I dunno what it means but might come in handy later.
 
-This is getting frustrating. Apparently /opt/piratebox/src/ also has the header file. At this point just give permission to all directories by writing:
+This is getting frustrating. Apparently **/opt/piratebox/src/** also has the header file. At this point just give permission to all directories by writing:
 >sudo chmod a+rw /opt/piratebox/ -R
 
 When I enter to piratebox.lan (we need to change this too) and check the source, firefox shows me this:
@@ -47,7 +49,7 @@ So this means that the correct CSS is in the /content/ directory. Let's try to c
 WHEN I FCKING DOWNLOAD THE F*CKING INDEX.HTML, IT DOWNLOADS THE FILE WITH THE CHANGES I'VE MADE.
 HOWEVER, WHEN I ENTER THE WEBSITE, IT DOESN'T SHOW ME ANY OF THE CHANGES I'VE MADE.
 
-Maybe the problem is being caused by /opt/piratebox/share/content/locales/data.en.properties cuz why not?
+Maybe the problem is being caused by **/opt/piratebox/share/content/locales/data.en.properties** cuz why not?
 At this point, everything is a suspect. Let's change the info and check if it works.
 IT WORKS!!!!!!!!! OMFG!!!!!
 
