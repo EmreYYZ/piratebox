@@ -1,0 +1,6 @@
+
+{ "piratebox" : { "module" : { 
+   "upload" : { "status" : true , "file" : "modules/upload.html" ,   "upload_style" : "droopy" ,   "droopy_port" : "8080", "droopy_host" : "piratebox.lan"  } 
+,  "shoutbox" : { "status" : true , "file" : "modules/chat.html" } 
+, "version" : "piratebox-ws_1.1.4 ## hotfix-1.1.4...origin/hotfix-1.1.4 759f6cd CHANGELOG: Update latest changes"
+ }  } }
