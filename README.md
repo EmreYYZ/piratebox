@@ -1,7 +1,9 @@
 # piratebox
  Edit the PirateBox interface, or die tryin'. 
 
-if your pc is connected to the internet via an ethernet cable, and if your pc has wifi capability; you can connect to the internet and to the piratebox at the same time, which makes the development way easier. 
+IMPORTANT PSA:You can upload this repository to **/opt/piratebox/** inside your piratebox to see the changes.
+
+If your pc is connected to the internet via an ethernet cable, and if your pc has wifi capability; you can connect to the internet and to the piratebox at the same time, which makes the development way easier. 
 
 I suggest using FileZilla for downloading and uploading files from piratebox. (download the zip version, not the sponsored shit. https://filezilla-project.org/download.php?show_all=1) You can also use Cyberduck, which is waaaay better but don't @ me if you do so.
 
