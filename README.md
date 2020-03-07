@@ -32,7 +32,7 @@ Giving permission to this **/opt/piratebox/bin/** might delete later >.<
 Nevermind
 
 The **lighttpd.conf** file in **/opt/piratebox/conf/lighttpd** has this info:
-> > Grabs main css
+>+comment+ Grabs main css
 >dir-listing.external-css     	= "/content/css/page_style.css"
 
 So this might mean that **page_style.css** in that specific directory is the main css. The same doc also says this:
