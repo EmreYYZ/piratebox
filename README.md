@@ -11,15 +11,15 @@ https://piratebox.cc/generic:mods:theming
 Write this to SSH (after logging in as "alarm") change permissions: (source https://forum.piratebox.cc/read.php?7,19858)
 >sudo chmod a+rw /opt/piratebox/www -R
 
-Of course you should change the directory according to your needs. For example I did sudo chmod a+rw /opt/piratebox/share/content -R. Use your brain, change whatever you need.
+Of course you should change the directory according to your needs. For example I did **sudo chmod a+rw /opt/piratebox/share/content -R**. Use your brain, change whatever you need.
 
-/opt/piratebox/share/Shared has the html for header and the footer. If you ask me, it is kind of a d*ck move on the developer's part, but what can you do amiright?
+**/opt/piratebox/share/Shared** has the html for header and the footer. If you ask me, it is kind of a d*ck move on the developer's part, but what can you do amiright?
 
 After doing the permission trick, I was able to change the title of the page. From "Welcome" to "Your mum". Aaaand ofcourse it didn't work. It requires a f*cccckinggg miracle for it to do so. 
 
 Trying to edit the piratebox interface is the most backward shit I've ever witnessed. And I'm from Turkey.
 
-Ok. Let's try this folder /opt/piratebox/www_content:
+Ok. Let's try this folder **/opt/piratebox/www_content**:
 >sudo chmod a+rw /opt/piratebox/www_content -R
 Ok. So apparently that directory is just a f*cking distraction. So write this command to destroy that directory, we don't need it.
 >sudo rmdir "/opt/piratebox/www_content"
@@ -30,7 +30,7 @@ Giving permission to this /opt/piratebox/bin/ might delete later >.<
 Nevermind
 
 The lighttpd.conf file in /opt/piratebox/conf/lighttpd has this info:
-># Grabs main css
+> > Grabs main css
 >dir-listing.external-css     	= "/content/css/page_style.css"
 
 So this might mean that page_style.css in that specific directory is the main css. The same doc also says this:
@@ -44,7 +44,7 @@ When I enter to piratebox.lan (we need to change this too) and check the source,
 ><link rel="stylesheet" href="/content/css/page_style.css">
 So this means that the correct CSS is in the /content/ directory. Let's try to change it. 
 
-WHEN I F*CKING DOWNLOAD THE F*CKING INDEX.HTML, IT DOWNLOADS THE FILE WITH THE CHANGES I'VE MADE.
+WHEN I FCKING DOWNLOAD THE F*CKING INDEX.HTML, IT DOWNLOADS THE FILE WITH THE CHANGES I'VE MADE.
 HOWEVER, WHEN I ENTER THE WEBSITE, IT DOESN'T SHOW ME ANY OF THE CHANGES I'VE MADE.
 
 Maybe the problem is being caused by /opt/piratebox/share/content/locales/data.en.properties cuz why not?
